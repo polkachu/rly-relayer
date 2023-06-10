@@ -17,7 +17,7 @@
 - name: create relayer systemd unit
   become: true
   template:
-    src: 'rly.service.j2'
+    src: 'relayer.service.j2'
     dest: '/etc/systemd/system/relayer.service'
     owner: root
     group: root
