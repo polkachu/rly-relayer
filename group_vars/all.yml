@@ -1,0 +1,4 @@
+---
+rly_repo: https://github.com/cosmos/relayer
+rly_version: v2.3.1
+metrics_port: 5183

@@ -1,0 +1,6 @@
+---
+- name: Config rly relayer
+  hosts: '{{ target }}_relayer'
+  gather_facts: false
+  roles:
+    - main

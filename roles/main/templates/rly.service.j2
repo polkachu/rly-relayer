@@ -1,0 +1,12 @@
+Description=rly IBC relayer for {{ target }}
+After=network.target
+
+[Service]
+Type=simple
+User={{ ansible_user }}
+ExecStart=/home/{{ ansible_user }}/go/bin/rly start
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

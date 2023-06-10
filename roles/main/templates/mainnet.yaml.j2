@@ -1,0 +1,12 @@
+global:
+  api-listen-addr: :{{ metrics_port }}
+  timeout: 10s
+  memo: {{ memo }}
+  light-cache-size: 20
+chains:
+  {% include 'mainnet/chains/juno.yaml.j2' %}
+
+  {% include 'mainnet/chains/osmosis.yaml.j2' %}
+
+paths:
+  {% include 'mainnet/paths/juno-osmosis.yaml.j2' %}

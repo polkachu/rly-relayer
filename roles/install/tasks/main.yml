@@ -1,0 +1,19 @@
+---
+- name: Install rly from source
+  git:
+    repo: '{{ rly_repo }}'
+    dest: '{{ user_dir }}/relayer'
+    version: '{{ rly_version }}'
+    update: yes
+    force: yes
+    recursive: no
+
+- name: Install node
+  command: '{{ item }}'
+  args:
+    chdir: '{{ user_dir }}/relayer'
+  with_items:
+    - 'make install'
+  environment:
+    PATH: '{{ path }}'
+    GOPATH: '{{ user_dir }}/go'

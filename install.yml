@@ -1,0 +1,6 @@
+---
+- name: Install rly
+  hosts: '{{ target }}_relayer'
+  gather_facts: false
+  roles:
+    - install

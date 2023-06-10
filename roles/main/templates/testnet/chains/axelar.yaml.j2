@@ -1,0 +1,22 @@
+{%- filter indent(width=2) %}
+axelar:
+  type: cosmos
+  value:
+    key-directory: /home/ubuntu/.relayer/keys/axelar-testnet-lisbon-3
+    key: relayer
+    chain-id: axelar-testnet-lisbon-3
+    rpc-addr: http://{{ testnet_axelar_ip }}:15157
+    account-prefix: axelar
+    keyring-backend: test
+    gas-adjustment: 1.2
+    gas-prices: 0.007uaxl
+    min-gas-amount: 0
+    debug: false
+    timeout: 20s
+    block-timeout: ""
+    output-format: json
+    sign-mode: direct
+    extra-codecs: []
+    coin-type: 118
+    broadcast-mode: batch
+{%- endfilter %}
